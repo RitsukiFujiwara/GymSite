@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PracticeSite</title>
+    <link rel="stylesheet" href="swiper.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="global-container">
+      <div id="container">
+        <div class="mobile-menu__cover"></div>
+        <div class="nav-trigger"></div>
+        <header class="header">
+          <div class="header__inner appear up">
+            <div class="logo item">
+              <img src="images/logo.svg" alt="" class="logo__img" />
+              <span class="logo__stay">Body</span>
+              <span class="logo__world">Make</span>
+            </div>
+            <nav class="header__nav">
+              <ul class="header__ul">
+                <li class="header__li item"><a href="#">Service</a></li>
+                <li class="header__li item"><a href="#">Company</a></li>
+                <li class="header__li item">
+                  <a class="btn filled" href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <button class="mobile-menu__btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </header>
+         <!-- ボディ部分（ここから） -->      
+        <div id="content">
+        <!-- スライダー部分 -->
+          <div class="hero">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="hero__title">プロによるマンツーマン指導</div>
+                  <img src="images/image-1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <div class="hero__title">徹底した食事管理</div>
+                  <img src="images/image-2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <div class="hero__title">目標に合わせたメニュー</div>
+                  <img src="images/image-3.jpg" alt="" />
+                </div>
+              </div>
+              <div class="hero__footer">
+                <img class="hero__downarrow" src="images/arrow.svg">
+                <span class="hero__scrolltext">scroll</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="swiper.min.js"></script>
+    <script src="hero-slider.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
