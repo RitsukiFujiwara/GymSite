@@ -13,7 +13,7 @@ class HeroSlider {
             effect: 'coverflow',
             centeredSlides: true,
             slidesPerView: 1,
-            speed: 2000,
+            speed: 1000,
             breakpoints: {
                 1024: {
                     slidesPerView: 2,

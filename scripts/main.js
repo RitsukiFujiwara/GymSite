@@ -1,36 +1,41 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const hero = new HeroSlider('.swiper-container');
-    hero.start();
+    const main = new Main();
 });
 
 class Main {
     constructor() {
         this.header = document.querySelector('.header');
-        this.sides = document.querySelector('.side');
+        this.sides = document.querySelectorAll('.side');
         this._observers = [];
         this._init();
     }
+
     set observers(val) {
         this._observers.push(val);
     }
+
     get observers() {
         return this._observers;
     }
+
     _init() {
         new MobileMenu();
-        this.hero = HeroSlider('.swiper-container');
-        Pace.on('done',this._paceDone.bind(this));
+        this.hero = new HeroSlider('.swiper-container');
+        Pace.on('done', this._paceDone.bind(this));
     }
+
     _paceDone() {
         this._scrollInit();
     }
-    _inviewAnimation(el,inview) {
+
+    _inviewAnimation(el, inview) {
         if(inview) {
             el.classList.add('inview');
         }else {
             el.classList.remove('inview');
         }
     }
+
     _navAnimation(el, inview) {
         if(inview) {
             this.header.classList.remove('triggered');
@@ -81,5 +86,4 @@ class Main {
         this.observers = new ScrollObserver('#main-content', this._sideAnimation.bind(this), {once: false, rootMargin: "-300px 0px"});
     }
 }
-
 
