@@ -102,7 +102,7 @@
 }
 
 .btn.filled {
-  background-color: black;
+  background-color: #c9c487;
   color: white;
   -webkit-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
@@ -947,10 +947,6 @@
           transition-delay: 0.35s;
 }
 
-.menu-open .mobile-menu__btn > span {
-  background-color: black;
-}
-
 .menu-open .mobile-menu__btn > span:nth-child(1) {
   -webkit-transition-delay: 70ms;
           transition-delay: 70ms;
@@ -979,6 +975,25 @@ Stylesheet: ベーススタイル
 ******************************************************************/
 body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
+  text-align: center;
+  background-color: black;
+}
+
+body section {
+  padding-bottom: 80px;
+  background-color: black;
+}
+
+body h2 {
+  color: #c9c487;
+}
+
+body p {
+  color: #c9c487;
+}
+
+body a {
+  color: #c9c487;
 }
 
 img {
@@ -1002,15 +1017,15 @@ img {
   font-size: 25px;
 }
 
-.mb-sm, .travel__sub, .travel__img, .houses__title, .popular__title {
+.mb-sm, .houses__title, .popular__title {
   margin-bottom: 16px !important;
 }
 
-.mb-lg, .travel, .houses, .popular__btn {
+.mb-lg, .houses, .popular__btn {
   margin-bottom: 80px !important;
 }
 
-.pb-sm, .travel__texts, .popular__container {
+.pb-sm, #travel__texts, .popular__container {
   padding-bottom: 16px !important;
 }
 
@@ -1018,7 +1033,7 @@ img {
   padding-bottom: 80px !important;
 }
 
-.content-width, .header__inner, .travel, .houses, .popular__header, .popular__container, .footer {
+.content-width, .header__inner, .houses, .popular__header, .popular__container, .footer {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
@@ -1028,13 +1043,14 @@ img {
   font-weight: 600;
   margin-bottom: 0;
   display: block;
+  color: #c9c487;
 }
 
 .sub-title {
-  color: #535353;
+  color: white;
 }
 
-.flex, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
+.flex, .houses__inner, .popular__container, .footer__nav, .footer__ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1074,7 +1090,7 @@ main {
   left: 0;
   width: 100%;
   height: 100px;
-  background-color: transparent;
+  background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1111,9 +1127,13 @@ main {
 }
 
 .header__li > a {
-  color: black;
+  color: #c9c487;
   text-decoration: none !important;
   text-transform: uppercase;
+}
+
+.header__li > a:hover {
+  color: white;
 }
 
 .header .logo {
@@ -1121,6 +1141,14 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.header .logo__stay {
+  color: #a0a0a0;
+}
+
+.header .logo__world {
+  color: #c9c487;
 }
 
 .header__inner {
@@ -1135,62 +1163,35 @@ main {
           align-items: center;
 }
 
-.travel__inner {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 15px;
-  background-color: #eaebe6;
-  position: relative;
-  z-index: 0;
+.mobile-menu__btn span {
+  background-color: #c9c487;
 }
 
-.travel__title {
-  position: relative;
+.mobile-menu__btn span.logo__stay {
+  color: #a0a0a0;
 }
 
-.travel__title::before {
-  display: none;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -120px;
-  width: 100px;
-  height: 1px;
+.mobile-menu__btn span.logo__world {
+  color: #c9c487;
+}
+
+.mobile-menu span.logo__stay {
+  color: #a0a0a0;
+}
+
+.mobile-menu span.logo__world {
+  color: #c9c487;
+}
+
+.hero {
   background-color: black;
-  -webkit-transform: translateY(-50%) scaleX(0);
-          transform: translateY(-50%) scaleX(0);
-  -webkit-transition: -webkit-transform 0.3s ease 1.6s;
-  transition: -webkit-transform 0.3s ease 1.6s;
-  transition: transform 0.3s ease 1.6s;
-  transition: transform 0.3s ease 1.6s, -webkit-transform 0.3s ease 1.6s;
-  -webkit-transform-origin: right;
-          transform-origin: right;
 }
 
-.travel__img {
-  height: 300px;
-  -webkit-transition: -webkit-box-shadow 1ms linear 0.8s;
-  transition: -webkit-box-shadow 1ms linear 0.8s;
-  transition: box-shadow 1ms linear 0.8s;
-  transition: box-shadow 1ms linear 0.8s, -webkit-box-shadow 1ms linear 0.8s;
+#travel span {
+  font-size: 28px;
 }
 
-.travel__img > img {
-  position: relative;
-  z-index: -1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.travel__img.inview {
-  -webkit-box-shadow: inset 0 0 30px black;
-          box-shadow: inset 0 0 30px black;
-}
-
-.travel__texts.inview .travel__title::before {
+#travel__texts.inview .travel__title::before {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -1380,7 +1381,7 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
-  .flex, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
+  .flex, .houses__inner, .popular__container, .footer__nav, .footer__ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1446,7 +1447,7 @@ Stylesheet: 960px以上のモニタで適用
   .font-lg, .main-title {
     font-size: 36px;
   }
-  .mb-lg, .travel, .houses, .popular__btn {
+  .mb-lg, .houses, .popular__btn {
     margin-bottom: 150px !important;
   }
   .pb-lg, .hero {

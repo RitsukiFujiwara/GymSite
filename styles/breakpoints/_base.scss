@@ -5,6 +5,21 @@ Stylesheet: ベーススタイル
 ******************************************************************/
 body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
+  text-align: center;
+  background-color: $cBlack;
+  & section{
+    padding-bottom: 80px;
+    background-color: $cBlack;
+  }
+  & h2{
+    color: $cGold;
+  }
+  & p{
+    color: $cGold;
+  }
+  & a{
+    color: $cGold;
+  }
 }
 img {
   max-width: 100%;
@@ -44,10 +59,11 @@ img {
   font-weight: 600;
   margin-bottom: 0;
   display: block;
+  color: $cGold;
 }
 .sub-title {
   @extend .font-sm;
-  color: $cSubTitle;
+  color: $cWhite;
 }
 .flex {
   display: flex;
@@ -80,7 +96,7 @@ main {
   left: 0;
   width: 100%;
   height: $navHeight;
-  background-color: transparent;
+  background-color: $cBlack;
   display: flex;
   align-items: center;
   z-index: 100;
@@ -106,15 +122,24 @@ main {
     margin-left: 20px;
 
     & > a {
-      color: $cBlack;
+      color: $cGold;
       text-decoration: none !important;
       text-transform: uppercase;
+      &:hover{
+        color: $cWhite;
+      }
     }
   }
 
   & .logo {
     font-size: 38px;
     justify-content: center;
+    &__stay{
+      color: $cGray;
+    }
+    &__world{
+      color: $cGold;
+    }
   }
 
   &__inner {
@@ -125,60 +150,37 @@ main {
   }
 }
 
-.travel {
-  @extend .content-width;
-  @extend .mb-lg;
-
-  &__inner {
-    @extend .flex;
-    justify-content: space-between;
-    padding: 15px;
-    background-color: $cBgGray;
-    position: relative;
-    z-index: 0;
-  }
-
-  &__title {
-    position: relative;
-
-    @include p-base(
-      $display: none,
-      $width: 100px,
-      $height: 1px,
-      $top: 50%,
-      $left: -120px
-    ) {
-      background-color: $cBlack;
-      transform: translateY(-50%) scaleX(0);
-      transition: transform 0.3s ease 1.6s;
-      transform-origin: right;
+.mobile-menu__btn {
+  & span{
+    background-color: $cGold;
+    &.logo__stay{
+      color: $cGray;
     }
-
+    &.logo__world{
+      color: $cGold;
+    }
+  }
+}
+.mobile-menu{
+  & span{
     
-  }
-
-  &__sub {
-    @extend .mb-sm;
-  }
-
-  &__img {
-    height: 300px;
-    @extend .mb-sm;
-    transition: box-shadow 1ms linear 0.8s;
-
-    & > img {
-      position: relative;
-      z-index: -1;
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
+    &.logo__stay{
+      color: $cGray;
     }
-
-    &.inview {
-      box-shadow: inset 0 0 30px $cBlack;
+    &.logo__world{
+      color: $cGold;
     }
   }
+}
+.hero{
+  background-color: $cBlack;
+}
 
+#travel {
+
+  & span{
+    font-size: $xl-large;
+  }
   &__texts {
     @extend .pb-sm;
 
@@ -189,6 +191,8 @@ main {
     }
   }
 }
+
+
 
 .houses {
   @extend .content-width;
