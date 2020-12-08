@@ -12,7 +12,20 @@ body {
     background-color: $cBlack;
   }
   & h2{
-    color: $cGold;
+    color: $cWhite;
+    background: $cGold;
+    position: relative;
+    margin-bottom: 2em;
+    &::after{
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 46.5%;
+    border: 26px solid transparent;
+    border-top: 18px solid $cGold;
+    width: 0;
+    height: 0;
+    }
   }
   & p{
     color: $cGold;
@@ -20,6 +33,10 @@ body {
   & a{
     color: $cGold;
   }
+  & li{
+    list-style: none;
+  }
+  
 }
 img {
   max-width: 100%;
@@ -84,7 +101,7 @@ main {
 }
 
 #container {
-  background-color: $cWhite;
+  // background-color: $cWhite;
   position: relative;
   z-index: 10;
   transition: transform 0.5s, box-shadow 0.5s;
@@ -176,6 +193,48 @@ main {
   background-color: $cBlack;
 }
 
+.news{
+  width: 70%;
+  height: 5em;
+  overflow-y: scroll;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid $cGold;
+  padding: 5px 50px;
+  position: relative;
+}
+.photo-container{
+    width: 70%;
+    height: 20em;
+    margin: 0 auto;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+    &img{
+    top: 0;
+    left: 0;
+    position: absolute;
+    }
+}
+
+
+.cover-slide{
+  height: auto;
+  margin-right: 10px;
+  &::after{
+    display: inline-block;
+    transition: .5s;
+  }
+      &:hover{
+        transform: scale(1.03);
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+        transition: .5s;
+        cursor: pointer;
+      }
+  }
+
+ 
+
 #travel {
 
   & span{
@@ -191,6 +250,7 @@ main {
     }
   }
 }
+
 
 
 
@@ -263,6 +323,23 @@ main {
     }
   }
 }
+
+.input{
+  width: 50%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5px;
+  &_text{
+    width: 50%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5px;
+  height: 20em;
+  }
+}
+
 
 .logo {
   font-size: 42px;
@@ -372,3 +449,4 @@ main {
     }
   }
 }
+
