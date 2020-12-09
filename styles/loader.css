@@ -32,7 +32,7 @@
   font-weight: 100;
   font-size: 2em;
   font-family: 'Helvetica Neue', 'Yu Gothic', 'Meiryo', sans-serif;
-  color: #535353;
+  color: #c9c487;
 }
 
 .pace.pace-inactive {
@@ -42,7 +42,7 @@
 .pace-progress-inner {
   width: 40px;
   height: 40px;
-  background-color: #904669;
+  background-color: #c9c487;
   margin: 0 auto;
   -webkit-animation-name: sk-rotateplane;
           animation-name: sk-rotateplane;
@@ -62,31 +62,39 @@
 
 @-webkit-keyframes sk-rotateplane {
   0% {
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-            transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: scale(0);
+    transform: scale(0);
   }
-  50% {
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
-            transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
   }
   100% {
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
-            transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: scale(0);
+    transform: scale(0);
   }
 }
 
 @keyframes sk-rotateplane {
   0% {
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-            transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: scale(0);
+    transform: scale(0);
   }
-  50% {
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
-            transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
   }
   100% {
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
-            transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: scale(0);
+    transform: scale(0);
   }
 }
 /*# sourceMappingURL=loader.css.map */

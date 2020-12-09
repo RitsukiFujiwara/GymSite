@@ -33,7 +33,7 @@
   font-weight: 100;
   font-size: 2em;
   font-family: 'Helvetica Neue', 'Yu Gothic', 'Meiryo', sans-serif;
-  color: $cSubTitle;
+  color: $cGold;
 }
 
 .pace.pace-inactive {
@@ -43,7 +43,7 @@
 .pace-progress-inner {
   width: 40px;
   height: 40px;
-  background-color: $cWineRed;
+  background-color: $cGold;
 
   margin: 0 auto;
   @include animation(
@@ -55,13 +55,29 @@
 }
 
 @keyframes sk-rotateplane {
+  // 0% {
+  //   transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  // }
+  // 50% {
+  //   transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+  // }
+  // 100% {
+  //   transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  // }
   0% {
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
-  50% {
-    transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }

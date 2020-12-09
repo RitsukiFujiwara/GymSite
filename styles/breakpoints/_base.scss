@@ -349,11 +349,19 @@ main {
     width: 0.7em;
   }
 
+  &__stay {
+    color: $cGray;
+  }
+
   &__world {
-    color: $cWineRed;
+    color: $cGold;
   }
 }
-
+.footer__copyright{
+  &.item{
+    color: $cWhite;
+  }
+}
 .footer {
   padding: 60px 0;
   @extend .content-width;
@@ -377,8 +385,9 @@ main {
     margin: 10px;
 
     & > a {
-      color: $cSubTitle;
+      color: $cGold;
     }
+    
   }
 
   & .logo {
